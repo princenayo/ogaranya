@@ -106,7 +106,7 @@
       top: 0; 
       left: 0; 
       width: 100%; 
-      background: rgba(255, 255, 255, 0.95); 
+      background: rgba(226, 226, 230, 0.95); 
       box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
       z-index: 1000; 
       transition: var(--transition);
@@ -125,10 +125,22 @@
     }
     
     .logo { 
-      font-size: 1.8rem; 
-      font-weight: 700; 
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 2.2rem; 
+      font-weight: 800; 
       color: var(--primary);
       font-family: 'Playfair Display', serif;
+      margin-right: auto;
+    }
+    
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--secondary);
     }
     
     .logo span {
@@ -621,11 +633,14 @@
 </head>
 <body>
 
-  <!-- Header -->
+   <!-- Header -->
   <header id="header">
     <div class="container">
       <nav>
-        <div class="logo">Ogaranya <span>Solicitors</span></div>
+        <div class="logo">
+          <img src="justics.jpeg" alt="Ogaranya Solicitors Logo" class="logo-img">
+          Ogaranya <span>Solicitors</span>
+        </div>
         <ul id="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
@@ -637,7 +652,6 @@
         <button class="mobile-menu-btn" id="mobile-menu-toggle">
           <i class="fas fa-bars"></i>
         </button>
-        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
       </nav>
     </div>
   </header>
@@ -843,13 +857,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <h3>Ogaranya Solicitors</h3>
+          <div class="logo">
+            <img src="justics.jpeg" alt="Ogaranya Solicitors Logo" class="logo-img">
+            <h4>Ogaranya Solicitors</h4>
+            </div>
+          
           <p>Your trusted legal partners in Nigeria, providing expert representation and comprehensive legal services since 2013.</p>
           <div class="footer-social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://x.com/OgaranyaPi19797?t=Gd9DHXtMejugeUyI5kuRBA&s=09"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/ogaranya_solicitors?igsh=MTdwNzc0c3ZkejR4ag=="><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         
@@ -858,7 +876,7 @@
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#practice">Practice Areas</a></li>
+            <li><a href="#practice">Our Services</a></li>
             <li><a href="#team">Our Team</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact Us</a></li>
