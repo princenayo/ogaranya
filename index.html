@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ogaranya Solicitors | Trusted Legal Partners in Nigeria</title>
+  <meta name="description" content="Ogaranya Solicitors provides expert legal representation across Port Harcourt and Nigeria. Corporate, Criminal, Family, and Real Estate Law. Call now!" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2d4a80;
+      --secondary: #d4af37;
+      --secondary-light: #e9c74f;
+      --accent: #8b0000;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --gray: #6c757d;
+      --gray-light: #e9ecef;
+      --transition: all 0.3s ease;
+    }
+    
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    
+    body { 
+      color: var(--dark);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.8rem; }
+    h4 { font-size: 1.4rem; }
+    
+    p { margin-bottom: 1rem; }
+    
+    a { 
+      text-decoration: none; 
+      color: inherit; 
+      transition: var(--transition);
+    }
+    
+    .container { 
+      width: 90%; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+    }
+    
+    .section-padding {
+      padding: 5rem 0;
+    }
+    
+    .text-center { text-align: center; }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-size: 1rem;
+    }
+    
+    .btn-primary {
+      background: var(--secondary);
+      color: var(--dark);
+    }
+    
+    .btn-primary:hover {
+      background: var(--secondary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-secondary:hover {
+      background: white;
+      color: var(--primary);
+    }
+    
+    /* Header */
+    header { 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      background: rgba(255, 255, 255, 0.95); 
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+      z-index: 1000; 
+      transition: var(--transition);
+    }
+    
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    
+    nav { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 1.2rem 0; 
+    }
+    
+    .logo { 
+      font-size: 1.8rem; 
+      font-weight: 700; 
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .logo span {
+      color: var(--secondary);
+    }
+    
+    nav ul { 
+      display: flex; 
+      list-style: none; 
+      gap: 2rem; 
+    }
+    
+    nav ul li a { 
+      font-weight: 500;
+      position: relative;
+    }
+    
+    nav ul li a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--secondary);
+      transition: var(--transition);
+    }
+    
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+    
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url("bookshelf-bg.jpg") center / cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    /* Sections */
+    .section-title {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .section-intro {
+      text-align: center;
+      color: var(--gray);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      font-size: 1.1rem;
+    }
+    
+    /* About Section */
+    .about {
+      background: var(--light);
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    .about-text h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .feature i {
+      color: var(--secondary);
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+    }
+    
+    .about-image {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Practice Areas */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .practice-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border-top: 4px solid var(--secondary);
+    }
+    
+    .practice-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .practice-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .practice-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .practice-card p {
+      color: var(--gray);
+    }
+    
+    /* Team Section */
+    .team-section {
+      background: var(--light);
+    }
+    
+    .team-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .team-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 5px solid var(--secondary);
+    }
+    
+    .team-card h3 {
+      color: var(--primary);
+    }
+    
+    .team-card .position {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gray-light);
+      color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-left: 4px solid var(--secondary);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .testimonial-text:before {
+      content: """;
+      font-size: 4rem;
+      color: var(--gray-light);
+      position: absolute;
+      top: -20px;
+      left: -10px;
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .author-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .author-info h4 {
+      margin-bottom: 0.2rem;
+      color: var(--primary);
+    }
+    
+    .author-info p {
+      color: var(--gray);
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    
+    .cta-section h2 {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-section p {
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.5rem;
+      color: var(--secondary);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #ccc;
+      padding: 4rem 0 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    footer h3, footer h4 {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-about p {
+      margin-bottom: 1.5rem;
+    }
+    
+    footer ul {
+      list-style: none;
+      line-height: 2.2;
+    }
+    
+    footer a:hover {
+      color: var(--secondary);
+    }
+    
+    .footer-contact p {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-contact i {
+      color: var(--secondary);
+      margin-top: 0.2rem;
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      transition: var(--transition);
+    }
+    
+    .footer-social a:hover {
+      background: var(--secondary);
+      color: var(--dark);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      padding-top: 2rem;
+      border-top: 1px solid #333;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      h1 { font-size: 3rem; }
+      h2 { font-size: 2.2rem; }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-image {
+        order: -1;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: var(--transition);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      nav ul.active {
+        left: 0;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .btn-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 250px;
+      }
+      
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      
+      .section-padding {
+        padding: 3rem 0;
+      }
+      
+      .practice-card, .team-card, .testimonial-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <div class="logo">Ogaranya <span>Solicitors</span></div>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#practice">Practice Areas</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Your Trusted Legal Partners in Nigeria</h1>
+    <p>We provide a comprehensive, one-stop service, guiding our clients from initial consultation through to the highest court in the land when necessary.</p>
+    <div class="btn-group">
+      <a href="#contact" class="btn btn-primary">Get a Free Case Review</a>
+      <a href="#contact" class="btn btn-secondary">Contact Us Today</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-intro">We are a full-service law firm based in Port Harcourt, Nigeria. Our specialties include general legal practice, HR and employment law, contract management, charity and pro bono law, as well as civil and criminal litigation.</p>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Why Choose Ogaranya Solicitors?</h2>
+          <p>With over a decade of legal experience, our firm has established a reputation for excellence, integrity, and successful outcomes for our clients across Nigeria.</p>
+          
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-gavel"></i>
+              <div>
+                <h4>Expert Legal Representation</h4>
+                <p>Our attorneys are specialists in their respective fields with proven track records.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-handshake"></i>
+              <div>
+                <h4>Client-Focused Approach</h4>
+                <p>We prioritize your needs and maintain open communication throughout your case.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-balance-scale"></i>
+              <div>
+                <h4>Proven Results</h4>
+                <p>We have successfully represented clients in high-stakes litigation and complex transactions.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <i class="fas fa-award"></i>
+              <div>
+                <h4>Recognized Excellence</h4>
+                <p>Our firm has received multiple awards for legal excellence and client service.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-image">
+          <img src="bookshelf3.jpeg" alt="Ogaranya Solicitors Office">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section id="practice" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-intro">We offer comprehensive legal services across multiple practice areas to meet all your legal needs.</p>
+      
+      <div class="practice-grid">
+        <div class="practice-card">
+          <i class="fas fa-building"></i>
+          <h3>Corporate & Commercial Law</h3>
+          <p>We handle company registration, filing annual returns, ensuring proper corporate governance, and maintaining your company's records with the official registry (the CAC) to keep your business in good legal standing.</p>
+        </div>
+        <div class="practice-card">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Litigation & Dispute Resolution</h3>
+          <p>We represent our clients in cases involving debt recovery, breach of contract, landlord/tenant issues, professional negligence, and other conflicts where a legal solution is sought.</p>
+        </div>
+        <div class="practice-card">
+          <i class="fas fa-home"></i>
+          <h3>Real Estate & Property Law</h3>
+          <p>Land Acquisition, Title Perfection, Property Disputes, Leases. We guide you through all aspects of property transactions and disputes.</p>
+        </div>
+        <div class="practice-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Criminal Defense</h3>
+          <p>Expert representation for various criminal charges with a focus on protecting your rights and achieving the best possible outcome.</p>
+        </div>
+        <div class="practice-card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Charity Law</h3>
+          <p>We assist with incorporation, applying for tax-exempt status, ensuring compliance with regulatory bodies, and advising on governance matters specific to non-governmental Organizations.</p>
+        </div>
+        <div class="practice-card">
+          <i class="fas fa-users"></i>
+          <h3>HR and Employment Advisory</h3>
+          <p>We guide businesses in drafting employment contracts, creating company policies, handling disciplinary issues, and ensuring compliance with Nigerian labour laws.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section section-padding">
+    <div class="container">
+      <h2 class="section-title">Meet Our Principal</h2>
+      <p class="section-intro">Get to know the experienced legal professional leading our firm.</p>
+      
+      <div class="team-card">
+        <img src="ogara2.jpg" alt="Barr. Ogara Nnanyereugo" class="team-img">
+        <h3>Ogara Nnanyereugo Precious, Esq.</h3>
+        <p class="position">Principal Solicitor</p>
+        <p>Our Principal Solicitor is a seasoned Legal Practitioner with over ten years of post-call experience. We call him "Legal Panorama" for his vast legal knowledge and his online program where he discusses current legal issues that affect people's everyday business.</p>
+        
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/OgaranyaPi19797?t=Gd9DHXtMejugeUyI5kuRBA&s=09"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ogaranya_solicitors?igsh=MTdwNzc0c3ZkejR4ag=="><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-intro">Hear from our satisfied clients about their experience with Ogaranya Solicitors.</p>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Ogaranya Solicitors helped us recover ₦50 Million in a breach of contract case. Professional and dedicated throughout the process!
+          </div>
+          <div class="testimonial-author">
+            <img src="emeana.jpg" alt="Client" class="author-img">
+            <div class="author-info">
+              <h4>Chinedu E.</h4>
+              <p>Business Owner</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Outstanding representation in my family law case. The team was compassionate, knowledgeable, and achieved a great outcome. Highly recommended!
+          </div>
+          <div class="testimonial-author">
+            <img src="Amaka.jpeg" alt="Client" class="author-img">
+            <div class="author-info">
+              <h4>Amaka O.</h4>
+              <p>Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Their expertise in corporate law saved our business during a critical acquisition. Professional, responsive, and truly client-focused.
+          </div>
+          <div class="testimonial-author">
+            <img src="emeka.jpeg" alt="Client" class="author-img">
+            <div class="author-info">
+              <h4>Emeka N.</h4>
+              <p>CEO, Tech Company</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Protect Your Rights and Interests?</h2>
+      <p>Schedule a confidential consultation with one of our experienced attorneys today.</p>
+      <a href="tel:+2348080972809" class="btn btn-primary">Call Now: +234 80809972809</a>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+234 8064337113</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>ogaranyasolicitors@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Port Harcourt, Nigeria</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Ogaranya Solicitors</h3>
+          <p>Your trusted legal partners in Nigeria, providing expert representation and comprehensive legal services since 2013.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#practice">Practice Areas</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Port Harcourt, Nigeria</p>
+          <p><i class="fas fa-phone-alt"></i> +234 8080972809</p>
+          <p><i class="fas fa-envelope"></i> ogaranyasolicitors@gmail.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        © <span id="year"></span> Ogaranya Solicitors. All Rights Reserved.<br>
+        <small>Disclaimer: The information on this website is for general purposes only and does not constitute legal advice.</small><br>
+         <small>This website was designed by Nedrone Technologies, CALL US: +234 8064144551.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileMenuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      mobileMenuToggle.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
